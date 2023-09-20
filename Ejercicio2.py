@@ -3,6 +3,22 @@ import re
 # Función para validar si una línea de producción es válida
 def es_linea_valida(linea):
     patron_produccion = r'^[A-Z]\s*->\s*([A-Za-z0-9ε]+(\s*\|\s*[A-Za-z0-9ε]+)*)?$'
+
+    # ^           # Start of the string
+    # [A-Z]       # Single uppercase letter as LHS
+    # \s*         # Optional whitespace
+    # ->          # Arrow symbol
+    # \s*         # Optional whitespace
+    # (           # Start of RHS group
+    #     [A-Za-z0-9ε]+      # One or more alphanumeric characters or ε
+    #     (                   # Start of optional alternations
+    #         \s*             # Optional whitespace
+    #         \|              # Pipe symbol for alternations
+    #         \s*             # Optional whitespace
+    #         [A-Za-z0-9ε]+  # One or more alphanumeric characters or ε
+    #     )*                  # End of optional alternations (zero or more)
+    # )?          # End of RHS group (optional)
+    # $           # End of the string
     return re.match(patron_produccion, linea) is not None
 
 # Función para cargar una gramática desde un archivo de texto
