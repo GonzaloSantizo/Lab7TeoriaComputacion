@@ -2,5 +2,5 @@
 Repositorio para el laboratorio 7 de teoria de la computacion.
 
 
-##Video ejercicio 2: 
+## Video ejercicio 2: 
 https://youtu.be/g4ibQrlIcWQ
