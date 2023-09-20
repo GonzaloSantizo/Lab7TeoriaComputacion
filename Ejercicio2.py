@@ -86,7 +86,7 @@ def imprimir_gramatica(gramatica):
         print(f"{lhs} -> {producciones_str}")
 
 # Cargar una gramática desde un archivo de texto
-nombre_archivo = 'data.txt'  # Reemplaza con el nombre de tu archivo
+nombre_archivo = 'data.txt'  
 mi_gramatica = cargar_gramatica(nombre_archivo)
 
 if mi_gramatica is not None:
